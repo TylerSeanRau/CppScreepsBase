@@ -23,7 +23,7 @@ extern "C" void loop(void)
   emscripten::val parts = emscripten::val::array();
   parts.set(0, emscripten::val::global("cMOVE"));
   Memory.set("parts", parts);
-  Game.spawns.Spawn1.spawnCreep([MOVE], 'asdf');
+  //Game.spawns.Spawn1.spawnCreep([MOVE], 'asdf');
   int ret = Game["spawns"]["Spawn1"].call<int>("spawnCreep", parts, std::string{"jim"});
   std::printf("%d\n", ret);
 }
